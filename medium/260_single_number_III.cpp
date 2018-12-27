@@ -12,7 +12,7 @@ public:
         diff &= -diff;
         
         vector<int> result = {0, 0};
-        
+         
         for (int a : nums) {
             // if the bit is not set
             // remember to add () here or it would lead to wrong result
