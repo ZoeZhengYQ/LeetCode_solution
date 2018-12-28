@@ -1,4 +1,7 @@
 class Solution {
+
+    // recursive version
+    
 public:
     vector<string> generateParenthesis(int n) {
         if (n == 0) return vector<string> (1, "");
@@ -26,4 +29,5 @@ private:
             add_par(result, str + ")", leftCnt, rightCnt - 1);
         }
     }
+    
 };
