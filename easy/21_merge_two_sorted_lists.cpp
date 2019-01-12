@@ -24,6 +24,7 @@ public:
             ptr = ptr -> next;
         }
         
+        // 用一句简洁的代码将剩下的部分接上！！
         ptr -> next = l1 ? l1 : l2;
         return head.next;
     }
