@@ -2,7 +2,7 @@ class Solution {
 public:
     // solution 1:
     // feature of gray code: mirror arrangement
-    /*
+    
     vector<int> grayCode(int n) {
         vector<int> res (1, 0);
         for (int i = 0; i < n; ++i) {
@@ -13,8 +13,17 @@ public:
         }
         return res;
     }
-    */
+    
     
     // solution 2:
     // direct arrangement
-};
+    /*
+    vector<int> grayCode(int n) {
+        vector<int> res;
+        int size = pow(2, n);
+        for (int i = 0; i < size; ++i) {
+            res.push_back((i >> 1) ^ i);
+        }
+        return res;
+    }
+    */
