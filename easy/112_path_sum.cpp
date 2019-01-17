@@ -22,5 +22,6 @@ public:
         } 
         if (node->left) { findPath(node->left, sum - node->val, flg); }
         if (node->right) { findPath(node->right, sum - node->val, flg); }
+        
     }
 };
