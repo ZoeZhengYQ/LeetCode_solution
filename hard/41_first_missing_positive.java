@@ -2,7 +2,7 @@ class Solution {
     public int firstMissingPositive(int[] nums) {
         if (nums == null || nums.length == 0) return 1;
         
-        // range是左边部分idx + 1
+        // range是左边部分idx + 1，就是length
         int range = partition(nums);
         
         // 初始化为第range + 1，即前面range个都出现了
