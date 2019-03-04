@@ -51,7 +51,7 @@ class Solution {
             return tmp;
         }
         
-        // 如果没有right，successor就是parent
+        // 如果没有right，successor就是以cur为left的parent
         TreeNode cur = root;
         TreeNode succ = null;
         while (cur.val != p.val) {
