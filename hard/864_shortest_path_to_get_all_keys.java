@@ -60,10 +60,13 @@ class Solution {
                     int newKeys = cur.keys;
                     if (newX>=0 && newX<row && newY>=0 && newY<col) {
                         char c = grid[newX].charAt(newY);
+                        // Wall
                         if (c == '#') continue;
+                        //Keys
                         if (c >= 'a' && c <= 'f') {
                             newKeys |= (1 << (c - 'a'));
                         }
+                        // Doors without keys
                         if (c >= 'A' && c <= 'F' && ((newKeys & (1 << (c - 'A'))) == 0)) continue;
                         State newState = new State(newKeys, newX, newY);
                         if (set.add(newState.toString())) {
