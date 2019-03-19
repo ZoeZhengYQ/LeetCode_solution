@@ -62,4 +62,24 @@ class Solution {
         return res;
     }
     */
+    
+    // another solution using two ptrs
+    /*
+    public int totalFruit(int[] tree) {
+        Map<Integer, Integer> count = new HashMap<>();
+        int pre = 0;
+        int res = 0;
+        for (int cur = 0; cur < tree.length; ++cur) {
+            count.put(tree[cur], count.getOrDefault(tree[cur], 0)+1);
+            while (count.size() > 2) {
+                count.put(tree[pre], count.get(tree[pre])-1);
+                // remove until the size is 2!
+                if (count.get(tree[pre]) == 0) count.remove(tree[pre]);
+                pre++;
+            }
+            res = Math.max(res, cur-pre+1);
+        }
+        return res;
+    }
+    */
 }
