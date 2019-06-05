@@ -3,6 +3,8 @@ class Solution {
     // Max value r is the summary of all elements
     // Min value l is the max element
     // So we make mid = (l+r)/2 as start point
+    // 注意所有有最大值最小值然后找中间值的都有可能可以用BS！
+    
     // Time: O(log(sumOfArray - max) * n)
     // Space: O(1)
     public int splitArray(int[] nums, int m) {
