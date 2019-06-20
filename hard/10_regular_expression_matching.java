@@ -1,8 +1,8 @@
 class Solution {
     // Buttom up DP solution
     // One more row and col to represent empty s and p
-    // Time: O(m + n)
-    // Space: O(m + n)
+    // Time: O(mn)
+    // Space: O(mn)
     public boolean isMatch(String s, String p) {
         int sLen = s.length();
         int pLen = p.length();
