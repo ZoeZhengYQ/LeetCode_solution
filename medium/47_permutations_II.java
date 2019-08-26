@@ -1,6 +1,7 @@
 class Solution {
     // Use a set to eliminate duplicates
-    // Time: O(n^2)
+    // Time: O(2^n)
+    // Space: O(n^2)
     public List<List<Integer>> permuteUnique(int[] nums) {
         List<List<Integer>> results = new ArrayList<>();
         backtrace(results, 0, nums);

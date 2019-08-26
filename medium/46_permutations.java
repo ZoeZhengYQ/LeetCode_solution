@@ -1,6 +1,6 @@
 class Solution {
     // Recursive backtrace
-    // Time: O(n^2)
+    // Time: O(2^n)
     // Space: O(n^2)
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> results = new ArrayList<>();
