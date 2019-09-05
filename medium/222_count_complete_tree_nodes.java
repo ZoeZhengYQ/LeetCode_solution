@@ -11,11 +11,11 @@ class Solution {
     public int countNodes(TreeNode root) {
         int height = height(root);
         // Time: O(n)
-        return height == -1 ? 0 : 1 + countNodes(root.left) + countNodes(root.right);
-        // return height < 0 ? 0 : 
-        //     height(root.right) == height-1 ? 
-        //         (1 << height) + countNodes(root.right) : 
-        //         (1 << (height-1)) + countNodes(root.left);
+        // return height == -1 ? 0 : 1 + countNodes(root.left) + countNodes(root.right);
+        return height < 0 ? 0 : 
+            height(root.right) == height-1 ? 
+                (1 << height) + countNodes(root.right) : 
+                (1 << (height-1)) + countNodes(root.left);
     }
     // Iterative Solution
     // Time: O(height^2) -> O((log n)^2)
