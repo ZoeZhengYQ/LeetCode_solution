@@ -10,7 +10,7 @@
 class Solution {
     public int countNodes(TreeNode root) {
         int height = height(root);
-        // Time: O(n) ? No! O(h^2)
+        // Time: O(n)
         return height == -1 ? 0 : 1 + countNodes(root.left) + countNodes(root.right);
         // return height < 0 ? 0 : 
         //     height(root.right) == height-1 ? 
