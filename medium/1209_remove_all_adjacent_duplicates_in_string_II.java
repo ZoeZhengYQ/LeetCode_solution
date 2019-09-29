@@ -1,6 +1,7 @@
 class Solution {
     // Use stack to remove adjacent duplicates
     // Time: O(n)
+    // Space: O(n)
     class Data {
         char c;
         int num;
