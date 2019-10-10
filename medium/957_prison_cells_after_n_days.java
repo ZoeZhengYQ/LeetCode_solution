@@ -6,6 +6,7 @@ class Solution {
         
         while (N > 0) {
             map.put(Arrays.toString(cells), N);
+            N--;
             int[] next = new int[len];
             for (int i = 1; i < len-1; ++i) {
                 next[i] = (cells[i-1] == cells[i+1]) ? 1 : 0;
@@ -15,7 +16,6 @@ class Solution {
                 // Use mod to find the minimum steps needed to get to result
                 N %= (map.get(Arrays.toString(cells)) - N);
             }
-            N--;
         }
         return cells;
     }
