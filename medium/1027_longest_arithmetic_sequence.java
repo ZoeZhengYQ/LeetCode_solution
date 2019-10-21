@@ -8,6 +8,7 @@ class Solution {
         if (len <= 2) return len;
         
         int max = 0;
+        // map<diff, count>
         Map<Integer, Integer>[] dp = new HashMap[len];
         
         for (int i = 0; i < len; ++i) {
