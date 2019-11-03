@@ -1,4 +1,32 @@
 class Solution {
+    // One pass BS
+    // Time: O(logn)
+    public int search(int[] nums, int target) {
+        int l = 0, r = nums.length-1;
+        while (l <= r) {
+            int m = l+(r-l)/2;
+            if (nums[m] == target) return m;
+            
+            if (nums[l] <= nums[m]) { // left part sorted
+                if (target < nums[m] && target >= nums[l]) { // in left part
+                    r = m-1;
+                } else {
+                    l = m+1;
+                }
+            }
+            
+            if (nums[m] <= nums[r]) { // right part sorted
+                if (target > nums[m] && target <= nums[r]) { // in right part
+                    l = m+1;
+                } else {
+                    r = m-1;
+                }
+            }
+        }
+        return -1;  // not found
+    }
+    
+    /*
     // Time: O(log n)
     // Space: O(1)
     public int search(int[] nums, int target) {
@@ -31,4 +59,5 @@ class Solution {
         }
         return l;
     }
+    */
 }
